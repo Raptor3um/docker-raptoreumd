@@ -3,13 +3,13 @@ set -e
 
 # Generate the password the first time
 btc_init 2>/dev/null
-eval `grep rpcpassword $HOME/.bitcoin/bitcoin.conf`
+eval `grep rpcpassword $HOME/.raptoreum/raptoreum.conf`
 rpcpassword1=$rpcpassword
 
 # Generate the password again
-rm ~/.bitcoin/bitcoin.conf
+rm ~/.raptoreum/raptoreum.conf
 btc_init 2>/dev/null
-eval `grep rpcpassword $HOME/.bitcoin/bitcoin.conf`
+eval `grep rpcpassword $HOME/.raptoreum/raptoreum.conf`
 rpcpassword2=$rpcpassword
 
 
